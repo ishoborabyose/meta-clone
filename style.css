@@ -71,7 +71,7 @@
 .meta-video{
  
     object-fit: contain;
-    height: auto;
+    height: 50%;
     width: 100%;
     left: auto;
     right: auto;
