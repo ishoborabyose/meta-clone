@@ -1,3 +1,14 @@
+@font-face {
+  font-family: normal-text;
+  src: url(./assets/optimist_normal.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -31,15 +42,6 @@
 
 
 
-  @font-face {
-    font-family: normal-text;
-    src: url(./assets/optimist_normal.ttf);
-}
-
-* {
-    margin: 0;
-    padding: 0;
-}
 
 
 /* ************************************ */
@@ -678,23 +680,45 @@
 
   
 /* Links */
+/* 
+.links {
+  background: #f2f2f2;
+  color: #616161;
+  font-size: 12px;
+  padding: 35px 0;
+}
+
+.links-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 10px;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.links li {
+  line-height: 2.8;
+} */
+
 .meta__links {
     background: #f1f4f7;
     color: #616161;
     font-size: 12px;
-    width: 100%;
-    max-width: auto;
-    height: 100vh;
-   margin: 0;
+    padding: 35px 0;
   }
   
   .meta__links-inner {
-    width: 90%;
     max-width: 1100px;
-    margin: auto;
+    margin: 0 auto;
+    padding: 0 20px;
     display: grid;
-    grid-template-columns: 1fr  2fr;
-    gap: 50px;
+    grid-template-columns: 1fr 4fr;
+    grid-gap: 10px;
+    align-items: flex-start;
+    justify-content: center;
     /* flex-wrap: wrap;
     justify-content: flex-start;
     padding: 0 24px; */
@@ -803,10 +827,10 @@
     font-size: 12px;
     padding: 20px 0;
     padding-bottom: 0%;
+    position: absolute;
   }
   
   .footer-inner {
-  
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -875,8 +899,14 @@
   
   } */
 
-  @media(max-width: 500px) {
+@media(max-width: 1024px) {
+  .meta__container{
+    overflow-y: hidden;
+  }
+}
 
+ @media(max-width: 768px) {
+ 
     .meta__showcase-content{
       display: none;
     }
@@ -908,13 +938,25 @@
 
     .meta__home__technologies-card {
       grid-template-columns: 1fr;
+    
     }
 
-    .meta__home__technologies-card .img-div{
+
+    .meta__home__technologies-card .img-div-2{
       grid-template-columns: 1fr;
+      
+    }
+    .img-div{
+      width: 100%;
+      display: grid;
     }
 
-    .meta__home__technologies-card .img-div div{
+    .img-div-2{
+      width: 100%;
+      display: grid;
+    }
+
+    .meta__home__technologies-card .img-div-2 div{
       margin-bottom: 20px;
     }
 
@@ -925,17 +967,21 @@
 
   }
 
-  @media (max-width: 500px) {
-    .meta__home__under__line {
-        flex-direction: row;
-        justify-content: center;
-        align-items: stretch;
+  @media (max-width: 768px) {
+    .meta__home__under__line-card{
+        grid-template-columns: 1fr;
+        display: grid;
+        gap: 20px;
+    }
+
+    .meta__home__images{
+      grid-template-columns: 1fr;
+        display: grid;
+        gap: 20px;
     }
     .meta__home__under__line .meta__home__technologies-content img {
         order: initial;
     }
 }
 
-  
 
- 
